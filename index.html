@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- IE向上兼容？ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body>
+    <div id="background_img" class="background_1"></div>
+    <!-- HEADER START  -->
+    <!-- 顶部导航条开始 -->
+    <header class="top_bar">
+        <!-- SECTTION WEATHER部分 起  -->
+        <section class="weather">
+            <h1 class="weather_addr"><a href="#">河源：</a></h1>
+            <!-- 天气及温度情况 -->
+            <div class="temperature_wrap">
+                <div class="cur_weatherimg"></div><span id="currnet_temperature">-18℃</span>
+                <!-- 下拉未来天气模块 -->
+                <div class="future_temper_wrap">
+                    <p class="current_data">06月27日<span>农历六月初四</span></p>
+                    <p><a href="#">未来七天天气</a></p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>今天(周四)</p>
+                                <img src="img/a13.jpg">
+                                <p>-18℃</p>
+                                <p>多云</p>
+                                <p>东南风</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>今天(周四)</p>
+                                <img src="img/a13.jpg">
+                                <p>-18℃</p>
+                                <p>多云</p>
+                                <p>东南风</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>今天(周四)</p>
+                                <img src="img/a13.jpg">
+                                <p>-18℃</p>
+                                <p>多云</p>
+                                <p>东南风</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>今天(周四)</p>
+                                <img src="img/a13.jpg">
+                                <p>-18℃</p>
+                                <p>多云</p>
+                                <p>东南风</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 空气质量 -->
+            <div class="airquality_wrap">
+                <a href="#"><span class="air_level">良</span><span class="air_figure">87</span></a>
+            </div>
+        </section>
+        <!-- SECTTION WEATHER部分 end  -->
+        <!-- 个人习惯设置 -->
+        <section class="user_habit">
+            <ul>
+                <li><a href="#">宝箱</a></li>
+                <li><a href="#" id="change_skin">换肤</a></li>
+                <li><a href="#">消息</a></li>
+            </ul>
+        </section>
+        <!-- 主导航条设置 -->
+        <nav class="main_menu">
+            <ul>
+                <li><a href="#">糯米</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">贴吧</a></li>
+                <li>
+                    <a href="#">恭喜,您已登陆</a>
+                    <ul id="user_info">
+                        <li><a href="#">我的VIP</a></li>
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">帐号设置</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">设置</a>
+                    <ul id="user_config">
+                        <li><a href="#">搜索设置</a></li>
+                        <li><a href="#">高级搜索</a></li>
+                        <li><a href="#">关闭预测</a></li>
+                        <li><a href="#">搜索历史</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 顶部导航条结束-->
+    <!-- HEADER END  -->
+    <!-- 右侧导航条 开始-->
+    <aside>
+        <a href="#"><h1>更多产品</h1></a>
+        <ul>
+            <li>
+                <a href="#">
+                    <img class="nuomi">
+                    <p>糯米</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                     <img class="music">
+                    <p>音乐</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                     <img class="tupian">
+                    <p>图片</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="zhidao">
+                    <p>知道</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="wenku">
+                    <p>文库</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                     <img class="bangdan">
+                    <p>风云榜</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+	   更多产品&gt;&gt;
+	 </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- 右侧导航条 结束-->
+    <!-- 主体部分MAIN开始 -->
+    <article>
+        <!-- 搜索区域框 -->
+        <section class="search_wrap">
+            <!-- 主搜索条 -->
+            <img src="img/logo_white.png">
+            <form>
+                <input type="text">
+                <button>百度一下</button>
+                <div class="micimg"></div>
+            </form>
+        </section>
+        <section class="search_float_wrap">
+            <!-- 浮动搜索条 -->
+            <div>
+                <img src="img/baidulogo.png">
+                <form>
+                    <input type="text">
+                    <button>百度一下</button>
+                </form>
+            </div>
+        </section>
+        <!-- 主面板 -->
+        <section class="user_main">
+            <!-- 分面板选择器 -->
+            <ul class="card_selector">
+                <li class="cur_focus">我的关注</li>
+                <li>推荐</li>
+                <li>导航</li>
+                <!-- <li>视频</li> -->
+                <!-- <li>购物</li> -->
+            </ul>
+            <!-- 悬浮分面板选择器 -->
+            <ul class="card_selector_suspension">
+                <li>我的关注</li>
+                <li>推荐</li>
+                <li>导航</li>
+                <li>视频</li>
+                <li>购物</li>
+            </ul>
+            <!-- 面板卡片区 -->
+            <ul class="main_card">
+                <!-- 我的关注卡片 -->
+                <li class="card_attention">
+                    <dl>
+                        <dt>综合</dt>
+                        <div class="panel">
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                        </div>
+                    </dl>
+                    <dl>
+                        <dt>综合</dt>
+                        <div class="panel">
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                        </div>
+                    </dl>
+                    <dl>
+                        <dt>综合</dt>
+                        <div class="panel">
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                            <dd>
+                                <a href="#"><img src="img/webicon.png">我的综合网站</a>
+                            </dd>
+                        </div>
+                    </dl>
+                </li>
+                <!-- 推荐卡片 -->
+                <li class="card_recommend">
+                    <ul class="news">
+                        <li>
+                            <h2><a href="#">大标题推荐新闻大标题推荐新闻</a></h2>
+                            <p><img src="img/news/focus1.jpg"></p>
+                            <p>宅届热点新闻</p>
+                        </li>
+                        <li>
+                            <h2><a href="#">大标题推荐新闻大标题推荐新闻</a></h2>
+                            <p><img src="img/news/focus2.jpg"></p>
+                            <p>宅届热点新闻</p>
+                        </li>
+                        <li>
+                            <h2><a href="#">大标题推荐新闻大标题推荐新闻</a></h2>
+                            <p><img src="img/news/focus3.jpg"></p>
+                            <p>宅届热点新闻</p>
+                        </li>
+                        <li>
+                            <h2><a href="#">大标题推荐新闻大标题推荐新闻</a></h2>
+                            <p><img src="img/news/focus4.jpg"></p>
+                            <p>宅届热点新闻</p>
+                        </li>
+                        <li>
+                            <h2><a href="#">大标题推荐新闻大标题推荐新闻</a></h2>
+                            <p><img src="img/news/focus5.jpg"></p>
+                            <p>宅届热点新闻</p>
+                        </li>
+                        <li>
+                            <h2><a href="#">大标题推荐新闻大标题推荐新闻</a></h2>
+                            <p><img src="img/news/focus6.jpg"></p>
+                            <p>宅届热点新闻</p>
+                        </li>
+                    </ul>
+                </li>
+                <!-- 导航卡片 -->
+                <li class="card_nav">
+                    <dl>
+                        <dt>猜你喜欢</dt>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus1.jpg"></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>咨询信息</dt>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                        <dd>
+                            <a href="#"><img src="img/news/focus2.jpg"></a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <!-- 面板卡片区 结束-->
+        </section>
+    </article>
+    <!-- 主体部分MAIN结束 -->
+    <!-- 换肤器面板 -->
+    <div class="skin_panel">
+        <ul>
+            <li><img src="img/back/1.jpg"></li>
+            <li><img src="img/back/2.jpg"></li>
+            <li><img src="img/back/3.jpeg"></li>
+            <li><img src="img/back/4.jpg"></li>
+        </ul>
+    </div>
+    <footer style="display: none;">页脚部分省略</footer>
+    <script type="text/javascript" src="script/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="script/app.js"></script>
+</body>
+
+</html>
